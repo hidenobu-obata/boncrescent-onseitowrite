@@ -57,5 +57,3 @@ async def upload_audio(file: UploadFile = File(...)):
         print(f"Error: {e}")
         return JSONResponse(status_code=500, content={"error": "システムエラー"})
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
